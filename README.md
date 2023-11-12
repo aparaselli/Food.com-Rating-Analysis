@@ -1,4 +1,4 @@
-### Is Average Rating Correlated to Calories 
+# Is Average Rating Correlated to Calories 
 
 ## Introduction
 
