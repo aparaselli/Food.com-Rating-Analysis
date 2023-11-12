@@ -1,6 +1,9 @@
-# Food.com-Rating-Analysis
-# AWESOME SAUCE EDITS WOOOHOOO YIPPEEEE!
-TESTING SOMETHINGS
-'WRITING CODE(): '
-maybe test summore
-### HUGE TITLE WOOT
+### Is Average Rating Correlated to Calories 
+
+## Introduction
+
+## Clearning and EDA
+
+## Assessment of Missingness
+
+## Hypothesis Testing
