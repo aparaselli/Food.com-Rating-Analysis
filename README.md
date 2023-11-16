@@ -97,3 +97,4 @@ The observed difference in mean is: `-67.49293078106723`
 <iframe src="assets/Hypothesis-test-plot.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Hypothesis Testing Conclusion
+We produced a P-value of 0.0, which at the significance level of 0.05, we reject the null hypothesis. 
