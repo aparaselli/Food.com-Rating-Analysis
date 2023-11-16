@@ -14,8 +14,6 @@ The second dataset with information on user ratings of different recipes consist
 
 The columns that are relevant to our questions were `'nutrition'` (from the recipes dataset) and `'rating'` (from the rating dataset.) The `'nutrition'` column consisted of calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV). As our question focuses on the effect of calories on average rating, we extracted each value from the nutrition list and saved it as individual columns. From there, we took ​​`'calories'` for further analysis. As for the `'rating'` column, it included information about how each user rated a certain recipe (from 1 to 5). Our question looked more at how each recipe with individual calories differed in rating, so we found it relevant to take the average rating for each recipe. Therefore, we grouped by recipes, found the mean rating for each recipe and assigned a new column named `'avg_rating'`. 
 
-<iframe src="assets/Calories-Distribution.html" width=800 height=600 frameBorder=0></iframe>
-
 ## Clearning and EDA
 
 ### Data Cleaning
@@ -50,9 +48,13 @@ With the data cleaned and the average rating for each recipe calculated, we were
 As the data had up to 45k calories and was extremely right-skewed, we only plotted the data up to 5,000 calories. The resulting histogram is shown below. 
 The histogram is still mostly right-skewed, with most of the recipes ranging around 100-500 calories. This seems to fit the fact that recipes from Food.com are mostly home-made meals, thus the calorie count would be lower per meal. An average meal should be around 400-500 calories. 
 
+<iframe src="assets/Calories-Distribution.html" width=800 height=600 frameBorder=0></iframe>
+
 #### Distribution of Average Rating 
 We plotted a histogram for the average rating of recipes as shown below. 
 The graph appears to be left-skewed, with most of the recipes rating around 4.75-5 out of 5. It seems like the food in our Food.com dataset is mostly ranked very highly. We concluded that people tend to go online to rate food only if the food is exceptionally good. This also made us wonder if there is a strong correlation between calories and ratings. 
+
+<iframe src="assets/Rating-Distribution.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Bivariate Analysis
 ### Interesting Aggregates
