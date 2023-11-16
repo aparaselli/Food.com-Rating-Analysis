@@ -66,6 +66,15 @@ From our box plot above, we note that [0-1) has the most spread. The median decr
 
 ### Interesting Aggregates
 We looked further into the relationship between the measures of center (mean, median) and the max and min for calories in each group of average rating. This was important because by comparing the mean and median for each group, we can observe how outliers can affect mean. From our grouped DataFrame, it appears that lower rating groups had higher average calories, which supported our hypothesis that higher calorie foods tend to have lower ratings because people are more health-conscious in this day and age. The median shows a similar trend to the mean, which means that the outliers don't appear to affect it that much or perhaps proportionately. 
+
+| Average Rating Bins   |   Bin Size |   Mean Calories |   Median Calories |   Minimum Calories |   Maximum Calories |
+|:----------------------|-----------:|----------------:|------------------:|-------------------:|-------------------:|
+| [0-1)                 |       2546 |         467.855 |            335.4  |                0.6 |             4929.9 |
+| [1-2)                 |        602 |         419.372 |            274.5  |                0   |             4508.5 |
+| [2-3)                 |        788 |         427.01  |            304.75 |                0.9 |             4513.9 |
+| [3-4)                 |       3901 |         416.018 |            310.5  |                0   |             4887.9 |
+| [4-5]                 |      75145 |         405.93  |            303.3  |                0   |             4967.6 |
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
