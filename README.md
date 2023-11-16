@@ -80,7 +80,9 @@ We looked further into the relationship between the measures of center (mean, me
 One of the columns with many missing values is `avg_rating`. We reasoned that it could be NMAR because if all the reviewers perceived the recipe as bad, they would’ve rated it a 0 or simply did not rate it (NaN ratings meant it was missing.) Another explanation is that the people managing Food.com did not want a recipe to have extremely low ratings by including the 0 values, so the 0s were replaced by NaNs. Thus, the multiple missing values were NMAR, where users either rated it very poorly or just didn’t rate it at all. 
 
 However, we reasoned that `avg_rating` could be missing because the ingredients in the recipe were hard to find, and thus less people rated it (explaining the missing values.) If we were able to obtain another DataFrame categorizing each ingredient as ‘rare’ or ‘common’ and also an ingredients column, then we could analyze if the number of rare ingredients made `avg_rating` MAR. 
-
+### Missingness Dependency
+1. Average Rating and Calories (MAR)
+2. Average Rating and Protien (MCAR)
 ## Hypothesis Testing
 After visualizing our data in histograms, box plots, and aggregation, we decided to ask this question: does higher calories correlate with a lower average rating?  
 We split the average rating into 2 bins for simple analysis with a permutation test. We decided the best way would be to split it halfway of the ratings: the lower and higher half, with bins from [0-2.5) (0 inclusive, 2.5 exclusive), and [2.5-5) (2.5 inclusive, 5 exclusive). In addition, because the original distribution of the ratings is unknown, we will be conducting a permutation test.
