@@ -62,6 +62,8 @@ To further understand the relationship between Average Rating and Calories, we m
 
 From our box plot above, we note that [0-1) has the most spread. The median decreases, then increases and flats out as ratings go up. Generally, the relationship between the average ratings and calories seems to be the same across all 5 bins. There are also quite a lot of large outliers for each group.
 
+<iframe src="assets/Bivariate-plot.html" width=800 height=600 frameBorder=0></iframe>
+
 ### Interesting Aggregates
 ## Assessment of Missingness
 
