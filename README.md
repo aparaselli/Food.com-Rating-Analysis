@@ -29,6 +29,12 @@ Before we could analyze our data, we had to merge the two dataframes so that we 
    For our question, we needed the calories information stored in the first value of the list in `nutrition`. We decided to extract each value in the list and create columns for each one: `calories`, `total_fat`, `sugar`, `sodium`, `protein`, `saturated_fat`, `carbohydrates`. We also turned the type from strings to floats because after step 3 of cleaning we stored it as strings in a list.
 5. **Replaced 0 minutes with NaN:**
    We discovered that there were 3 instances of 0 minute values for minutes cooking, which seemed not plausible. There must be some time needed to make a recipe, so we replaced all the 0 minute values with NaN.
+6. **Dropped duplicate recipes:**
+   We removed all the duplicate recipe ids from the dataframe as we only were taking into account the calories of a specific recipe and its average rating. Our initial left merge made the recipe appear multiple times for every time a user rated it. 
+
+Our cleaned DataFrame has 83782 rows and 5 columns: `id`, `minutes`, `calories`, `protein`, `avg_rating`. The first 5 rows are shown in this DataFrame below: 
+
+`print(merge_avg.head().to_markdown(index=False))`
    
 ## Assessment of Missingness
 
