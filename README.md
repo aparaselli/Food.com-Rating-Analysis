@@ -44,6 +44,15 @@ Our cleaned DataFrame has 83782 rows and 5 columns: `id`, `minutes`, `calories`,
 | 275032 |        25 |      386.9 |         1 |            5 |
 
 ### Univariate Analysis
+With the data cleaned and the average rating for each recipe calculated, we were able to look at the distribution of calories of cooking time for each recipe and the distribution of average rating across all recipes. 
+
+#### Distribution of Recipe Calories 
+As the data had up to 45k calories and was extremely right-skewed, we only plotted the data up to 5,000 calories. The resulting histogram is shown below. 
+The histogram is still mostly right-skewed, with most of the recipes ranging around 100-500 calories. This seems to fit the fact that recipes from Food.com are mostly home-made meals, thus the calorie count would be lower per meal. An average meal should be around 400-500 calories. 
+
+#### Distribution of Average Rating 
+We plotted a histogram for the average rating of recipes as shown below. 
+The graph appears to be left-skewed, with most of the recipes rating around 4.75-5 out of 5. It seems like the food in our Food.com dataset is mostly ranked very highly. We concluded that people tend to go online to rate food only if the food is exceptionally good. This also made us wonder if there is a strong correlation between calories and ratings. 
 
 ### Bivariate Analysis
 ### Interesting Aggregates
