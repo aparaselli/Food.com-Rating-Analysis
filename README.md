@@ -98,5 +98,7 @@ The observed difference in mean is: `-67.49293078106723`
 
 <iframe src="assets/Hypothesis-test-plot.html" width=800 height=600 frameBorder=0></iframe>
 
+From the figure above we can observe that after 500 permutation trials, none of the trial difference in means is more significant or equal to the observed difference in means.
+
 ### Hypothesis Testing Conclusion
 We produced a P-value of 0.0, which at the significance level of 0.05, we reject the null hypothesis. 
