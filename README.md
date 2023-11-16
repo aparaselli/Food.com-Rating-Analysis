@@ -65,6 +65,7 @@ From our box plot above, we note that [0-1) has the most spread. The median decr
 <iframe src="assets/Bivariate-plot.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Interesting Aggregates
+We looked further into the relationship between the measures of center (mean, median) and the max and min for calories in each group of average rating. This was important because by comparing the mean and median for each group, we can observe how outliers can affect mean. From our grouped DataFrame, it appears that lower rating groups had higher average calories, which supported our hypothesis that higher calorie foods tend to have lower ratings because people are more health-conscious in this day and age. The median shows a similar trend to the mean, which means that the outliers don't appear to affect it that much or perhaps proportionately. 
 ## Assessment of Missingness
 
 ## Hypothesis Testing
