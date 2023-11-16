@@ -82,3 +82,14 @@ One of the columns with many missing values is `avg_rating`. We reasoned that it
 However, we reasoned that `avg_rating` could be missing because the ingredients in the recipe were hard to find, and thus less people rated it (explaining the missing values.) If we were able to obtain another DataFrame categorizing each ingredient as ‘rare’ or ‘common’ and also an ingredients column, then we could analyze if the number of rare ingredients made `avg_rating` MAR. 
 
 ## Hypothesis Testing
+After visualizing our data in histograms, box plots, and aggregation, we decided to ask this question: does higher calories correlate with a lower average rating?  
+We split the average rating into 2 bins for simple analysis with a permutation test. We decided the best way would be to split it halfway of the ratings: the lower and higher half, with bins from [0-2.5) (0 inclusive, 2.5 exclusive), and [2.5-5) (2.5 inclusive, 5 exclusive). In addition, because the original distribution of the ratings is unknown, we will be conducting a permutation test.
+
+**Null Hypothesis**: The mean of calories in different categories of average rating (ex: [0-2.5), [2.5-5)) are equal
+
+**Alternative Hypothesis**: The mean of calories in the category of average rating [0-2.5) is greater than the category of average rating [2.5-5). 
+
+We chose to conduct a one-tailed test because we assume that people are more health-conscious, thus they would rate higher calorie recipes much lower than lower calorie recipes. Seeing as `calories` is a continuous numerical variable, we decided to use difference in mean as a test statistic.
+
+The observed difference in mean is: ``
+
