@@ -57,6 +57,11 @@ The graph appears to be left-skewed, with most of the recipes rating around 4.75
 <iframe src="assets/Rating-Distribution.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Bivariate Analysis
+#### Box plot of Average Rating and Calories 
+To further understand the relationship between Average Rating and Calories, we must plot a bivariate graph. We tried plotting the scatterplot, but it showed a very column-like structure. Thus, we decided to group the average ratings in bins of [0-1) (0 inclusive, 1 exclusive), all the way to [4,5] (4 inclusive, 5 inclusive). Now the `average_rating` is a categorical variable, we could use boxplots to visualize the relationship between average ratings and calories. 
+
+From our box plot above, we note that [0-1) has the most spread. The median decreases, then increases and flats out as ratings go up. Generally, the relationship between the average ratings and calories seems to be the same across all 5 bins. There are also quite a lot of large outliers for each group.
+
 ### Interesting Aggregates
 ## Assessment of Missingness
 
