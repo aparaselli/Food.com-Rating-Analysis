@@ -34,7 +34,13 @@ Before we could analyze our data, we had to merge the two dataframes so that we 
 
 Our cleaned DataFrame has 83782 rows and 5 columns: `id`, `minutes`, `calories`, `protein`, `avg_rating`. The first 5 rows are shown in this DataFrame below: 
 
-`print(merge_avg.head().to_markdown(index=False))`
+|     id |   minutes |   calories |   protein |   avg_rating |
+|-------:|----------:|-----------:|----------:|-------------:|
+| 275022 |        50 |      386.1 |        41 |            3 |
+| 275024 |        55 |      377.1 |        13 |            3 |
+| 275026 |        45 |      326.6 |        37 |            3 |
+| 275030 |        45 |      577.7 |        14 |            5 |
+| 275032 |        25 |      386.9 |         1 |            5 |
    
 ## Assessment of Missingness
 
