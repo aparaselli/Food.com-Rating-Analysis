@@ -18,6 +18,7 @@ The columns that are relevant to our questions were `'nutrition'` (from the reci
 
 ## Clearning and EDA
 
+### Data Cleaning
 Before we could analyze our data, we had to merge the two dataframes so that we could have  our relevant information on one dataframe. We also cleaned up the data to make sure our dataframe is readable and correct. These are the steps we went through: 
 1. **Left merged recipes with ratings as one dataset:**
    We merged on “id” and “recipe id” respectively to ensure that we keep every column in the recipes dataset. This is to ensure that recipes that no one rated will be included in our analysis.
@@ -41,7 +42,11 @@ Our cleaned DataFrame has 83782 rows and 5 columns: `id`, `minutes`, `calories`,
 | 275026 |        45 |      326.6 |        37 |            3 |
 | 275030 |        45 |      577.7 |        14 |            5 |
 | 275032 |        25 |      386.9 |         1 |            5 |
-   
+
+### Univariate Analysis
+
+### Bivariate Analysis
+### Interesting Aggregates
 ## Assessment of Missingness
 
 ## Hypothesis Testing
