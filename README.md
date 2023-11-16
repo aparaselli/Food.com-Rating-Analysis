@@ -81,8 +81,45 @@ One of the columns with many missing values is `avg_rating`. We reasoned that it
 
 However, we reasoned that `avg_rating` could be missing because the ingredients in the recipe were hard to find, and thus less people rated it (explaining the missing values.) If we were able to obtain another DataFrame categorizing each ingredient as ‘rare’ or ‘common’ and also an ingredients column, then we could analyze if the number of rare ingredients made `avg_rating` MAR. 
 ### Missingness Dependency
-1. Average Rating and Calories (MAR)
-2. Average Rating and Protien (MCAR)
+
+We analyzed whether the missingness of average rating was dependent on the columns `calories` and `protein` for each recipe. 
+
+**1. Average Rating and Calories (MAR)**
+
+This is particularly important for our initial question as we wanted to see if there was a correlation between calories and average rating. If the average rating is missing because of either higher or lower calories, we can conclude that there may be a relationship between the two. 
+
+**Null hypothesis**: The missingness of average rating does NOT depend on calories.
+
+**Alternative hypothesis**: The missingness of average rating depends on calories.
+
+We created an extra column labeled `avg_missing` to assign each recipe as True if their `avg_rating` was NaN and False if not. We chose to use the test statistic of absolute mean difference, as we are performing a two-tailed test on continuous numeric values (calories). 
+
+Our observed absolute mean difference is: `61.12821293529993`
+
+We then used a permutation test to analyze our data, by shuffling the average rating column and then grouping by missingness and calculating the mean difference. The plot below shows the distribution of the test statistics in 1,000 permutations, and the red line signifies the observed test statistics.
+
+From this graph and our test, we get a p-value of `0.0` that is significantly less than our significance level of 0.05, so we _reject the null hypothesis_.
+
+We can conclude that the missingness of average rating depends on `calories`.
+
+**2. Average Rating and Protein (MCAR)**
+
+After we observed that `avg_rating` was dependent on the `calories` column, we decided to see if some other nutrition values may also affect the missingness of `avg_rating`. We chose `protein` as an example because fitness fanatics focus a lot on protein intake. 
+
+**Null hypothesis**: The missingness of average rating does NOT depend on protein.
+
+**Alternative hypothesis**: The missingness of average rating depends on protein.
+
+We made an extra column labeled `avg_missing` as before. We chose to use the test statistic of absolute mean difference, as we are performing a two-tailed test on continuous numeric values (protein). 
+
+Our observed absolute mean difference is: `0.4094732021558727`
+
+Again, we used a permutation test to analyze our data. The plot below shows the distribution of the test statistics in 1,000 permutations, and the red line signifies the observed test statistics.
+
+From this graph and our test, we get a p-value of `0.586` which is higher than our significance level of 0.05, so we _fail to reject the null hypothesis_.
+
+We can conclude that the missingness of average rating **does not** depend on `protein`.
+
 ## Hypothesis Testing
 After visualizing our data in histograms, box plots, and aggregation, we decided to ask this question: does higher calories correlate with a lower average rating?  
 We split the average rating into 2 bins for simple analysis with a permutation test. We decided the best way would be to split it halfway of the ratings: the lower and higher half, with bins from [0-2.5) (0 inclusive, 2.5 exclusive), and [2.5-5) (2.5 inclusive, 5 exclusive). In addition, because the original distribution of the ratings is unknown, we will be conducting a permutation test.
@@ -98,7 +135,6 @@ The observed difference in mean is: `-67.49293078106723`
 
 <iframe src="assets/Hypothesis-test-plot.html" width=800 height=600 frameBorder=0></iframe>
 
-From the figure above we can observe that after 500 permutation trials, none of the trial difference in means is more significant or equal to the observed difference in means.
-
 ### Hypothesis Testing Conclusion
-We produced a P-value of 0.0, which at the significance level of 0.05, we reject the null hypothesis. 
+We produced a P-value of `0.0`, which at the significance level of 0.05, we _reject the null hypothesis_. 
+We can conclude that when average rating is lower, the average calories per recipe is higher. 
