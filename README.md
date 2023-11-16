@@ -114,6 +114,10 @@ After we observed that `avg_rating` was dependent on the `calories` column, we d
 
 We made an extra column labeled `avg_missing` as before. We chose to use the test statistic of absolute mean difference, as we are performing a two-tailed test on continuous numeric values (protein). 
 
+When plotting the distribution of protein seperated by their missing status we can see that the distribution of protein in each category is very similar. The Not Missing values have a smoother descent which is to be expeccted as Not Missing has a lot more values. 
+
+<iframe src="assets/Missingness-Protein.html" width=800 height=600 frameBorder=0></iframe>
+
 Our observed absolute mean difference is: `0.4094732021558727`
 
 Again, we used a permutation test to analyze our data. The plot below shows the distribution of the test statistics in 1,000 permutations, and the red line signifies the observed test statistics.
@@ -130,7 +134,11 @@ We split the average rating into 2 bins for simple analysis with a permutation t
 
 **Null Hypothesis**: The mean of calories in different categories of average rating (ex: [0-2.5), [2.5-5)) are equal
 
-**Alternative Hypothesis**: The mean of calories in the category of average rating [0-2.5) is greater than the category of average rating [2.5-5). 
+**Alternative Hypothesis**: The mean of calories in the category of average rating [0-2.5) is greater than the category of average rating [2.5-5).
+
+After plotting the distribution of calories for both the missing and non missing values we observed that both of the distributions are very similar and both right-skewed. Additionally the missingness category has slightly more variance.
+
+<iframe src="assets/Missingness-Calories.html" width=800 height=600 frameBorder=0></iframe>
 
 We chose to conduct a one-tailed test because we assume that people are more health-conscious, thus they would rate higher calorie recipes much lower than lower calorie recipes. Seeing as `calories` is a continuous numerical variable, we decided to use difference in mean as a test statistic.
 
