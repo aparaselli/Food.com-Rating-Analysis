@@ -93,4 +93,7 @@ We chose to conduct a one-tailed test because we assume that people are more hea
 
 The observed difference in mean is: `-67.49293078106723`
 ### Permutation Testing
+
+<iframe src="assets/Hypothesis-test-plot.html" width=800 height=600 frameBorder=0></iframe>
+
 ### Hypothesis Testing Conclusion
