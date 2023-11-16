@@ -98,6 +98,8 @@ Our observed absolute mean difference is: `61.12821293529993`
 
 We then used a permutation test to analyze our data, by shuffling the average rating column and then grouping by missingness and calculating the mean difference. The plot below shows the distribution of the test statistics in 1,000 permutations, and the red line signifies the observed test statistics.
 
+<iframe src="assets/Calories-Permutation.html" width=800 height=600 frameBorder=0></iframe>
+
 From this graph and our test, we get a p-value of `0.0` that is significantly less than our significance level of 0.05, so we _reject the null hypothesis_.
 
 We can conclude that the missingness of average rating depends on `calories`.
@@ -115,6 +117,8 @@ We made an extra column labeled `avg_missing` as before. We chose to use the tes
 Our observed absolute mean difference is: `0.4094732021558727`
 
 Again, we used a permutation test to analyze our data. The plot below shows the distribution of the test statistics in 1,000 permutations, and the red line signifies the observed test statistics.
+
+<iframe src="assets/Protein-Permutation.html" width=800 height=600 frameBorder=0></iframe>
 
 From this graph and our test, we get a p-value of `0.586` which is higher than our significance level of 0.05, so we _fail to reject the null hypothesis_.
 
