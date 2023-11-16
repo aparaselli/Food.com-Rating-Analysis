@@ -91,5 +91,5 @@ We split the average rating into 2 bins for simple analysis with a permutation t
 
 We chose to conduct a one-tailed test because we assume that people are more health-conscious, thus they would rate higher calorie recipes much lower than lower calorie recipes. Seeing as `calories` is a continuous numerical variable, we decided to use difference in mean as a test statistic.
 
-The observed difference in mean is: ``
+The observed difference in mean is: `-67.49293078106723`
 
