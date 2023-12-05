@@ -1,5 +1,5 @@
 # Is Average Rating of Recipes Correlated to Calories?! 
-By Athulith Paraselli & Jennifer Hung
+By Jennifer Hung & Athulith Paraselli
 ## Introduction
 
 In society where people are becoming progressively more conscious about healthy eating and diet culture, we wonder how this would affect their perception of whether a meal was good or bad. Many health-conscious people hyper-focus on calorie counting and restrictive eating. Thus, we ask the question: Does the number of calories in a recipe affect the average rating of the food? By proposing this question, we investigate whether people’s perception of higher calorie recipes is worse rated or if they are simply more delicious.
